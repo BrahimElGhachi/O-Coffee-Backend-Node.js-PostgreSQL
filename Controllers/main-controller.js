@@ -1,11 +1,11 @@
 const mainController = {
-    renderHomePage (req, res) {
+    renderHomePage(req, res) {
         res.render("pages/home");
     },
 
-    renderCatalogPage (req, res) {
+    renderCatalogPage(req, res) {
         res.render("pages/catalog");
-    },
+    }
 };
 
-export default mainController;
+export {mainController};

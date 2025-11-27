@@ -1,125 +1,46 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <!-- Common meta tags go here -->
 
-    <!-- Common styles go here -->
+<head>
+  <%- include('../partials/head') %>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/catalog.css">
 
-    <!-- Common scripts go here -->
+  <!-- Scripts -->
+  <script defer src="/js/catalog.js"></script>
+</head>
 
-    <!-- Style -->
-    <link rel="stylesheet" href="../css/catalog.css" />
+<body>
+  <%- include('../partials/header') %>
 
-    <!-- Scripts -->
-    <script defer src="../js/catalog.js"></script>
-  </head>
+  <main>
+    <section id="catalog">
+      <h1>Notre catalogue</h1>
 
-  <body>
-    <!-- Include Header here -->
+      <div class="articles only-display-3-articles" id="articles-list">
 
-    <main>
-      <section id="catalog">
-        <h1>Notre catalogue</h1>
+        <% for (const coffee of coffees) { %>
 
-        <div class="articles only-display-3-articles" id="articles-list">
           <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
+            <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>">
             <div>
-              <h2>Sumatra Mandheling 1</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
+              <h2><%= coffee.name %></h2>
+              <p><%= coffee.country_name %></p>
+              <p><%= coffee.price_per_kg %>€/kg</p>
               <a class="button-outline" href="#">Voir le détail</a>
             </div>
           </article>
 
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
+        <% } %>
 
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
+      </div>
 
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
+      <button class="button" id="see-all-products-button">Voir tous les produits</button>
+    </section>
 
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
+  </main>
 
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-
-          <article>
-            <img
-              src="../images/coffees/295432730.png"
-              alt="Sumatra Mandheling"
-            />
-            <div>
-              <h2>Sumatra Mandheling 2</h2>
-              <p>Origine Indonésie</p>
-              <p>25,99 €/kg</p>
-              <a class="button-outline" href="#">Voir le détail</a>
-            </div>
-          </article>
-        </div>
-
-        <button class="button" id="see-all-products-button">
-          Voir tous les produits
-        </button>
-      </section>
-    </main>
-
-    <!-- Include Footer here -->
-  </body>
+  <%- include('../partials/footer') %>
+</body>
 </html>
