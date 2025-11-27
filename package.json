@@ -1,0 +1,31 @@
+{
+  "name": "sb04-ocoffee-brahimelghachi",
+  "version": "1.0.0",
+  "description": "## Projet Ocoffee",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node --watch index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-clock-Florence/SB04-ocoffee-BrahimElGhachi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-clock-Florence/SB04-ocoffee-BrahimElGhachi/issues"
+  },
+  "homepage": "https://github.com/O-clock-Florence/SB04-ocoffee-BrahimElGhachi#readme",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
