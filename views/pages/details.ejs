@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('../partials/head') %>
+
+        <link rel="stylesheet" href="/css/detail.css">
+
+        <title>
+            <%= pageTitle %>
+        </title>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+
+        <main>
+            <section id="product-detail">
+
+                <h1>
+                    <%= coffee.name %>
+                </h1>
+
+                <div class="detail-container">
+
+                    <div class="image-section">
+                        <img src="/images/coffees/<%= coffee.reference %>.png" alt="<%= coffee.name %>">
+                    </div>
+
+                    <div class="info-section">
+
+                        <h2>Description</h2>
+                        <p>
+                            <%= coffee.description %>
+                        </p>
+
+                        <div class="features">
+                            <p><strong>Origine :</strong>
+                                <%= coffee.country_name %>
+                            </p>
+                            <p><strong>Référence :</strong>
+                                <%= coffee.reference %>
+                            </p>
+                            <p><strong>Prix :</strong> **<%= coffee.price_per_kg %>€/kg**</p>
+
+                            <% if (coffee.availability) { %>
+                                <p class="status available">✅ Disponible</p>
+                                <% } else { %>
+                                    <p class="status unavailable">❌ Indisponible</p>
+                                    <% } %>
+                        </div>
+
+                        <a href="/catalog" class="button-back">Retour au catalogue</a>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <%- include('../partials/footer') %>
+</body>
+
+</html>

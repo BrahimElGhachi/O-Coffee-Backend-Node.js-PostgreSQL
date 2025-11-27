@@ -6,5 +6,6 @@ const router = Router();
 
 router.get("/", mainController.renderHomePage);
 router.get("/catalog", catalogController.displayCatalog);
+router.get("/catalog/:id", catalogController.displayCoffeeDetail);
 
 export default router;
