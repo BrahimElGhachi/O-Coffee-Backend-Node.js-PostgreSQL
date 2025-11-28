@@ -4,7 +4,7 @@ import {catalogController} from './Controllers/catalog.controller.js'
 
 const router = Router();
 
-router.get("/", mainController.renderHomePage);
+router.get("/", catalogController.displayNewCoffees);
 router.get("/catalog", catalogController.displayCatalog);
 router.get("/catalog/:id", catalogController.displayCoffeeDetail);
 

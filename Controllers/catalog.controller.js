@@ -1,6 +1,14 @@
 import { dataMapper } from '../dataMapper/dataMapper.js';
 
 const catalogController = {
+
+    async displayNewCoffees(_req, res) {
+        const newCoffees = await dataMapper.getLatestProduct();
+        console.log(newCoffees);
+        res.render('pages/home', { newCoffees});
+    },
+
+
     async displayCatalog(_req, res) {
         const coffees = await dataMapper.getListCoffee();
         console.log(coffees);

@@ -9,6 +9,3 @@ document.addEventListener('DOMContentLoaded', () => {
         seeAllBtn.style.display = 'none';
     });
 });
-
-
-// DESOLE GUILHAUME MAIS C'EST LE SEUL FICHIER QUE J'AI FAIS AVEC CHATGPT :-)
