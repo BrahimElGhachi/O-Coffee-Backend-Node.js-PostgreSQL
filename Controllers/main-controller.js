@@ -9,7 +9,8 @@ const mainController = {
 
     displayMap (req, res) {
         res.render('pages/map');
-    }
+    },
+
 
 };
 
