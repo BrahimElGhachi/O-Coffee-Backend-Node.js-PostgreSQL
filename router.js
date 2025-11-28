@@ -8,4 +8,6 @@ router.get("/", catalogController.displayNewCoffees);
 router.get("/catalog", catalogController.displayCatalog);
 router.get("/catalog/:id", catalogController.displayCoffeeDetail);
 
+router.get('/map', mainController.displayMap);
+
 export default router;

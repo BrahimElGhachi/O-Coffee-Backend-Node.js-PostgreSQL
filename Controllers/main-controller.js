@@ -5,7 +5,12 @@ const mainController = {
 
     renderCatalogPage(req, res) {
         res.render("pages/catalog");
+    },
+
+    displayMap (req, res) {
+        res.render('pages/map');
     }
+
 };
 
 export {mainController};
